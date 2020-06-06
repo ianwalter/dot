@@ -1,0 +1,17 @@
+{
+  "name": "@ianwalter/dot",
+  "version": "0.0.0",
+  "license": "SEE LICENSE IN LICENSE",
+  "main": "dist/dot.js",
+  "module": "dist/dot.m.js",
+  "scripts": {
+    "pretest": "dist",
+    "test": "bff"
+  },
+  "devDependencies": {
+    "@ianwalter/bff": "^9.8.2",
+    "@ianwalter/dist": "^6.0.0",
+    "@ianwalter/eslint-config": "^5.0.0",
+    "@ianwalter/renovate-config": "^1.3.0"
+  }
+}
