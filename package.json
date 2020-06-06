@@ -6,6 +6,7 @@
   "main": "dist/dot.js",
   "module": "dist/dot.m.js",
   "scripts": {
+    "lint": "eslint .",
     "pretest": "dist",
     "test": "bff"
   },
@@ -21,6 +22,9 @@
       "@ianwalter"
     ]
   },
+  "eslintIgnore": [
+    "dist"
+  ],
   "renovate": {
     "extends": [
       "@ianwalter"

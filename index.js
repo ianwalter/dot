@@ -50,7 +50,7 @@ export function del (src, path = '') {
   return src
 }
 
-export function has (src, path ='') {
+export function has (src, path = '') {
   const pathKeys = path.split('.')
   const lastIndex = pathKeys.length - 1
 
