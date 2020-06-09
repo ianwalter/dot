@@ -1,6 +1,8 @@
 const isObj = i => typeof i === 'object' && i && !Array.isArray(i)
 
-export function get (src, path = '', defaultValue) {
+export function get (src, path, defaultValue) {
+  if (!path) return src
+
   const pathKeys = path.split('.')
 
   let current = src
