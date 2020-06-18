@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/dot",
-  "description": "Work with nested JavaScript Objects using dot path strings",
+  "description": "Work with nested JavaScript Objects and dot path strings",
   "version": "1.0.0",
   "license": "SEE LICENSE IN LICENSE",
   "author": {

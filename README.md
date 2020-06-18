@@ -1,5 +1,5 @@
 # @ianwalter/dot
-> Work with nested JavaScript Objects using dot path strings
+> Work with nested JavaScript Objects and dot path strings
 
 [![npm page][npmImage]][npmUrl]
 [![CI][ciImage]][ciUrl]
