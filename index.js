@@ -68,7 +68,7 @@ export function has (src, path = '') {
   }
 }
 
-export function match (a, b) {
+export function match (a = '', b = '') {
   const aKeys = a.split('.')
   const bKeys = b.split('.')
   const last = Math.min(aKeys.length, bKeys.length) - 1

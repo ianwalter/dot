@@ -38,4 +38,6 @@ test('match', t => {
   t.expect(dot.match('1.2', '1')).toBe(false)
   t.expect(dot.match('1.*', '1.2.3')).toBe(true)
   t.expect(dot.match('1.2.3', '1.2.*')).toBe(true)
+  t.expect(dot.match('1')).toBe(false)
+  t.expect(dot.match(undefined, '1.2')).toBe(false)
 })
