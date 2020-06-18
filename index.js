@@ -67,3 +67,21 @@ export function has (src, path = '') {
     }
   }
 }
+
+export function match (a, b) {
+  const aKeys = a.split('.')
+  const bKeys = b.split('.')
+  const last = Math.min(aKeys.length, bKeys.length) - 1
+  let aStar = false
+  let bStar = false
+  for (let i = 0; i < aKeys.length; i++) {
+    aStar = aKeys[i] === '*' || (aStar && !aKeys[i])
+    bStar = bKeys[i] === '*' || (bStar && !bKeys[i])
+    const aStarMatch = aStar && (bKeys[i] || i >= last)
+    const bStarMatch = bStar && (aKeys[i] || i >= last)
+    const lengthMismatch = aKeys.length !== bKeys.length
+    if (aKeys[i] !== bKeys[i] && !aStarMatch && !bStarMatch) return false
+    if (i === last && lengthMismatch && !aStar && !bStar) return false
+  }
+  return true
+}
