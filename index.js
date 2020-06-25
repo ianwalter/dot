@@ -7,9 +7,7 @@ export function get (src, path, defaultValue) {
 
   let current = src
   for (const key of pathKeys) {
-    if (!Object.prototype.propertyIsEnumerable.call(current, key)) {
-      return defaultValue
-    }
+    if (!(key in current)) return defaultValue
     current = current[key]
   }
 
@@ -59,7 +57,7 @@ export function has (src, path = '') {
   let current = src
   for (let i = 0; i < pathKeys.length; i++) {
     if (i === lastIndex) {
-      return Object.prototype.propertyIsEnumerable.call(current, pathKeys[i])
+      return pathKeys[i] in current
     } else {
       if (!isObj(current[pathKeys[i]])) return false
 
