@@ -5,6 +5,10 @@ test('simple get', t => {
   t.expect(dot.get({ key: { to: 'life' } }, 'key.to')).toBe('life')
 })
 
+test('get falsy parent', t => {
+  t.expect(dot.get({ key: false }, 'key.to')).toBe(undefined)
+})
+
 test('fallback to default', t => {
   t.expect(dot.get({}, 'ok.so', 'what')).toBe('what')
 })

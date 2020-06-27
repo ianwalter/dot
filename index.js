@@ -7,7 +7,7 @@ export function get (src, path, defaultValue) {
 
   let current = src
   for (const key of pathKeys) {
-    if (!(key in current)) return defaultValue
+    if (!current || !(key in current)) return defaultValue
     current = current[key]
   }
 
