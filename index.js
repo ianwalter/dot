@@ -38,6 +38,7 @@ export function del (src, path = '') {
 
   let current = src
   for (let i = 0; i < pathKeys.length; i++) {
+    if (!current) continue
     if (i === lastIndex) {
       delete current[pathKeys[i]]
     } else {

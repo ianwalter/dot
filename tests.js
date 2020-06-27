@@ -19,6 +19,12 @@ test('simple delete', t => {
     .toEqual({ you: { know: false } })
 })
 
+test('delete from falsy source', t => {
+  t.expect(dot.del(undefined, 'password')).toBe(undefined)
+  t.expect(dot.del(null, 'password')).toBe(null)
+  t.expect(dot.del(false, 'password')).toBe(false)
+})
+
 test('simple has', t => {
   t.expect(dot.has({ say: { a: 'prayer' } }, 'say.a')).toBe(true)
   t.expect(dot.has({ say: { a: 'prayer' } }, 'say.b')).toBe(false)
