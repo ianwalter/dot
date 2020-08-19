@@ -84,3 +84,5 @@ export function match (a = '', b = '') {
   }
   return true
 }
+
+export default { get, set, del, has, match }
