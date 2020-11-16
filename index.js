@@ -27,7 +27,7 @@ export function set (src, path = '', value) {
     ) {
       continue
     }
-    
+
     if (i === lastIndex) {
       current[pathKeys[i]] = value
     } else {
